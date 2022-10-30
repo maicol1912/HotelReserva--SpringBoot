@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "factura")
@@ -15,12 +17,15 @@ public class Factura {
     @Column(name = "id_factura")
     private Integer idFactura;
 
+    @NotBlank
     @Column(name = "servicio_factura")
     private String servicioFactura;
 
+    @NotNull
     @Column(name = "costo_factura")
     private Integer costoFactura;
 
+    @NotBlank
     @Column(name = "detalle_factura")
     private String detalleFactura;
 

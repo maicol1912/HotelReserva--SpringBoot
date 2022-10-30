@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-
-public class IndexController {
-    @GetMapping("/")
-    public String primerTemplate(){
-        return "pages/index";
+@RequestMapping("/validacion")
+public class ValidacionController {
+    @GetMapping("/sesion")
+    public String validarSesion(){
+        return "pages/login";
     }
 }

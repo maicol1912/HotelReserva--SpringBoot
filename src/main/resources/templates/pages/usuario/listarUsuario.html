@@ -7,7 +7,7 @@
 
 <body>
     <nav th:replace="/partials/base.html ::barra"></nav>
-    
+    <h1>hola</h1>
     <h1 class="text-primary border border-primari border-top-0" th:text="${titulo}"></h1>
     <p><a th:href="@{/usuario/form}" class="btn btn-success btn-xs">Crear Usuario</a></p>
     <table class="table table-striper">
@@ -16,8 +16,10 @@
             <th>Nombre</th>
             <th>Telefono</th>
             <th>Correo</th>
+            <th>Password</th>
             <th>Editar</th>
             <th>Eliminar</th>
+
     
         </thead>
     
@@ -27,7 +29,7 @@
                 <td th:text="${usuario.nombreUsuario}"></td>
                 <td th:text="${usuario.telefonoUsuario}"></td>
                 <td th:text="${usuario.correoUsuario}"></td>
-    
+                <td th:text="${usuario.passwordUsuario}"></td>
                 <td><a th:href="@{/usuario/actualizar/} + ${usuario.idUsuario}" class="btn btn-primary btn-xs">Editar</a></td>
                 <td><a th:href="@{/usuario/eliminar/} + ${usuario.idUsuario}" class="btn btn-danger btn-xs"
                         onclick="return confirm('Esta seguro que desea eliminar el registro?')">Eliminar</a></td>

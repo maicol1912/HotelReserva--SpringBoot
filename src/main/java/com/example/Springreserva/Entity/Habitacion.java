@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
+import javax.validation.constraints.NotBlank;
 
 
 @Entity
@@ -20,9 +20,11 @@ public class Habitacion {
     @Column(name = "id_habitacion")
     private Integer idHabitacion;
 
+    @NotBlank
     @Column(name = "detalle_habitacion")
     private String detalleHabitacion;
 
+    @NotBlank
     @Column(name = "estado_habitacion")
     private String estadoHabitacion;
 
